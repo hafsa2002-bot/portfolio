@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f01983e040.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+        .blue-light {
+            background: radial-gradient(circle, rgba(0, 0, 255, 0.6) 0%, transparent 70%);
+        }
+        .red-light {
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-[#18181b] text-white">
+    <header class="fixed z-999 top-0 w-full">
+        <nav class=" flex justify-between items-center lg:px-14 px-4 py-5 lg:py-4 bg-[#18181b]">
+            <div class="flex gap-3 items-center">
+                <div class="w-10 ml-3 rounded-full overflow-hidden"><img class="w-full" src="logo_H.jpg" alt=""></div>
+                <div class="text-2xl text-white font-semibold hover:text-[#1d4ed8]"><a href="#home">HAFSA BARHOUD</a></div>
+            </div>
+            <!-- for laptop version -->
+            <div class="lg:block hidden">
+                <ul class="flex items-center gap-8 font-bold text-xl">
+                    <li class="text-[#9ca3af] hover:text-[#1d4ed8] text-sm"><a href="#home">HOME</a></li>
+                    <li class="text-[#9ca3af] hover:text-[#1d4ed8] text-sm"><a href="#about">ABOUT</a></li>
+                    <li class="text-[#9ca3af] hover:text-[#1d4ed8] text-sm"><a href="#projects">PROJECTS</a></li>
+                    <li class="text-[#9ca3af] hover:text-[#1d4ed8] text-sm"><a href="#educations">EDUCATION</a></li>
+                    <li class="text-[#9ca3af] hover:text-[#1d4ed8] text-sm"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <!-- ********************* -->
+            <!-- Menu for mobile phone -->
+             <div class="block lg:hidden group/menu">
+                <i class="group-hover/menu:hidden fa-solid fa-bars fa-xl" style="color: #ffffff;"></i> 
+                <i class="hidden group-hover/menu:block  fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+                <ul class="hidden group-hover/menu:block list-none bg-[#18181b]  text-white w-screen absolute z-100 right-1 top-20">
+                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#home">HOME</a></li>
+                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#about">ABOUT</a></li>
+                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#projects">PROJECTS</a></li>
+                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#educations">EDUCATION</a></li>
+                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#contact">CONTACT</a></li>
+                </ul>
+             </div>
+        </nav>
+    </header>
+    <main>
+        <section class="h-full lg:px-48 pt-32 pb-40 mt-24 scroll-mt-16 relative -z-10 lg:overflow-hidden lg:bg-[#18181b] bg-[#15151d]" id="home">
+            <!-- the left blue light -->
+            <div class="hidden lg:block blue-light absolute w-[500px] h-[500px] rounded-full opacity-[0.2] top-[-80px] left-[-200px]"></div>
+            <!-- the right red light -->
+            <div class="hidden lg:block red-light absolute w-[400px] h-[400px] rounded-full opacity-[0.2] bottom-[-100px] right-[-200px]"></div>
+            <div data-aos="zoom-in" data-aos-duration="400" data-aos-delay="100" data-aos-easing="linear" class="text-4xl  lg:text-6xl font-extrabold tracking-wide text-center"><h1>HEY, I'M <span class="text-[#2563eb]">HAFSA BARHOUD</span></h1></div>
+            <div data-aos="zoom-in-up" data-aos-duration="400" data-aos-delay="100"  data-aos-easing="linear"  class="px-4 text-[#d1d5db] text-xl tracking-wider text-center mt-10 mb-10"><p>A skilled web developer, designing and managing websites and web<br> applications with precision to drive the success of the entire product.</p></div>
+            <div data-aos="zoom-in-up" data-aos-duration="400" data-aos-delay="100" data-aos-easing="linear" class=" m-auto text-center bg-[#2563eb] w-40 py-4 px-5 rounded-lg text-xl font-semibold hover:tracking-widest hover:w-44 hover:relative hover:bottom-[2px] hover:bg-[#1d4ed8] duration-150 ease-linear"><a href="#projects">PROJECTS</a></div>
+        </section>
+        <!-- The about section -->
+        <section class="mt-28 relative -z-10">
+            <div data-aos="zoom-in-up" ata-aos-easing="linear" data-aos-duration="600">
+                <div class="text-center font-bold text-4xl tracking-wide"><h1 class="lg:scroll-m-16 scroll-m-28" id="about" >ABOUT ME</h1></div>
+                <hr class="w-14 h-1.5  my-4 rounded-full border-2 m-auto border-blue-600 bg-blue-600">
+                <div class="px-5 text-center text-xl mt-6 text-[#d1d5db]"><p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and <br>technology</p></div>
+            </div>
+            <div class="flex lg:flex-row flex-col gap-12 lg:px-20 px-5 py-5">
+                <div class="lg:w-1/2 px-2" data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear">
+                    <div class="font-bold text-2xl pb-4"><h3>Know About me!</h3></div>
+                    <div class="text-[#d1d5db] mb-9">
+                        <p class="mb-3">Hi, I'm Hafsa Barhoud, a 22-year-old from Morocco with a passion for web development. I'm constantly exploring new ways to enhance my skills and create meaningful digital experiences.</p>
+                        <p class="mb-3">I love tackling challenges, learning new technologies, and sharing knowledge with others. Whether working independently or collaboratively, I strive to exceed expectations and deliver high-quality results.</p>
+                        <p class="mb-3">Beyond coding, I enjoy capturing moments through photography 📸 and diving into the world of books 📚.</p>   
+                        <p class="mb-3">I'm always excited to connect with people from different fields and exchange ideas. If you'd like to chat, brainstorm, or collaborate, feel free to reach out. 😊</p>
+                    </div>
+                    <a class="bg-[#2563eb] rounded-lg tracking-widest text-sm px-8 py-3 font-medium hover:relative hover:bottom-1 hover:bg-[#1d4ed8]" href="#contact">CONTACT</a>
+                </div>
+                <div class="lg:w-1/2" data-aos="zoom-in-up" data-aos-duration="400" ata-aos-easing="linear">
+                    <div class="font-bold text-2xl pb-4"><h3>My Skills</h3></div>
+                    <div class="text-[#d1d5db] flex flex-wrap gap-4 lg:pr-28">
+                        <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">Python</div>
+                        <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">Flask</div>
+                        <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">Php</div>
+                        <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">C++</div>
+                        <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">C</div>
+                        <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">MySQL</div>
+                        <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">HTML</div>
+                        <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">CSS</div>
+                        <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">Bootstrap</div>
+                        <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">TailwindCSS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- projects section -->
+        <section class="lg:mt-56 mt-36 relative -z-10">
+            <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear">
+                <div class="text-center font-bold text-4xl tracking-wide"><h3 class="lg:scroll-m-16 scroll-m-28" id="projects">PROJECTS</h3></div>
+                <hr class="w-14 h-1.5  my-4 rounded-full border-2 m-auto border-blue-600 bg-blue-600">
+                <div class="text-center lg:text-xl mt-6 text-[#9ca3af] mb-12"><p>Explore a collection of projects I've created, each showcasing my personal work and accompanied by a detailed<br class="hidden lg:block"> case study</p></div>
+            </div>
+            <!-- Online Store -->
+            <div data-aos="zoom-in-up" data-aos-duration="800" ata-aos-easing="linear" class="bg-[#10100d] flex lg:flex-row flex-col gap-12 lg:mx-20 m-auto lg:w-10.5/12 w-11/12 rounded-lg px-7  pt-7 pb-12 mb-6">
+                <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="onlineStore_capture.png"></div>
+                <div class="lg:w-1/2">
+                    <div class="font-bold text-2xl mb-3 "><h1>Crystal Bloom</h1></div>
+                    <div class="text-[#d1d5db] lg:pr-12"><p>Crystal Bloom is a premier online destination for timeless accessories, built to blend elegance with functionality. Powered by modern web technologies, this platform ensures a seamless shopping experience, offering a meticulously curated collection of earrings, watches, rings, and necklaces. With a mobile-friendly design, an intuitive navigation bar, and a visually engaging interface, Crystal Bloom caters to users seeking style and versatility.</p></div>
+                    <div class="bg-[#2563eb] font-semibold tracking-wide rounded-lg lg:w-1/3 w-1/2 text-center py-2.5 mt-5 hover:bg-[#1d4ed8]"><a href="https://hafsa2002-bot.github.io/Online_Store/">VISIT PROJECT</a></div>
+                </div>
+            </div>
+            <!-- Travel Agency website -->
+            <div data-aos="zoom-in-up" data-aos-duration="800" ata-aos-easing="linear" class="bg-[#10100d] lg:flex-row flex-col flex gap-12 lg:mx-20 m-auto lg:w-10.5/12 w-11/12 rounded-lg px-7  pt-7 pb-12 mb-6">
+                <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="travelAgency_capture.png"></div>
+                <div class="lg:w-1/2">
+                    <div class="font-bold text-2xl mb-3 "><h1>Dreamscape Travels</h1></div>
+                    <div class="text-[#d1d5db] lg:pr-12">
+                        <p>Dreamscape Travels is an innovative travel agency website designed to inspire your wanderlust. Built with modern web technologies, it combines elegance and functionality to deliver an engaging user experience. Featuring dynamic destination highlights, curated tour packages, and a seamless contact form, the platform ensures effortless vacation planning while emphasizing accessibility and responsiveness for stunning performance across devices.</p>
+                    </div>
+                    <div class="bg-[#2563eb] font-semibold tracking-wide rounded-lg lg:w-1/3 w-1/2 text-center py-2.5 mt-5 hover:bg-[#1d4ed8]"><a href="https://hafsa2002-bot.github.io/travel-agency/">VISIT PROJECT</a></div>
+                </div>
+            </div>
+            <!-- Restaurant website -->
+            <div data-aos="zoom-in-up" data-aos-duration="800" ata-aos-easing="linear" class="bg-[#10100d] flex lg:flex-row flex-col gap-12 lg:mx-20 m-auto  lg:w-10.5/12 w-11/12 rounded-lg px-7  pt-7 pb-12">
+                <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="restaurant_capture.png"></div>
+                <div class="lg:w-1/2">
+                    <div class="font-bold text-2xl mb-3 "><h1>The Hungry Spoon</h1></div>
+                    <div class="text-[#d1d5db] lg:pr-12"><p>The Hungry Spoon is a dynamic and visually appealing website designed to provide users with an immersive online dining experience. The website highlights the restaurant's unique offerings, menu, and services while also offering an easy way for customers to reach out and interact with the brand. Built with HTML, CSS, and FontAwesome icons, the website features sections for the menu, about the restaurant, contact form, and footer with important details.</p></div>
+                    <div class="bg-[rgb(37,99,235)] font-semibold tracking-wide rounded-lg lg:w-1/3 w-1/2 text-center py-2.5 mt-5 hover:bg-[#1d4ed8]"><a href="https://hafsa2002-bot.github.io/CSS2/">VISIT PROJECT</a></div>
+                </div>
+            </div>
+        </section>
+        <!-- education section -->
+        <section class="mt-32 relative -z-10">
+            <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear">
+                <div class="text-center font-bold text-4xl tracking-wide"><h3 class="lg:scroll-m-16 scroll-m-28" id="educations">EDUCATIONS</h3></div>
+                <hr class="w-14 h-1.5  my-4 rounded-full border-2 m-auto border-blue-600 bg-blue-600">  
+            </div>
+            <!-- laptop version -->
+            <div class="hidden lg:block text-[#d1d5db] w-9/12 m-auto h-screen mt-0 ">
+                <div class=" bg-[#18181b] m-auto  w-20 h-32"></div>
+                <hr class="absolute -z-10  w-9/12 mx-auto rotate-90   border-white border-2 mt-96">
+                <!-- the odin project -->
+                <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear" class="flex justify-between items-baseline mb-20">
+                    <div class="w-2/5 bg-[#1f2937] rounded-lg p-6">
+                        <h1 class="text-xl font-bold">The Odin Project – Online</h1>    
+                        <p class="text-lg">Full-Stack JavaScript Development</p>
+                    </div>
+                    <div class=" h-16 w-16 text-center m-auto bg-white rounded-full border-4 border-[#2563eb]"><i class="fa-solid fa-laptop fa-xl mt-7" style="color: #2563eb;"></i></div>
+                    <div class="w-2/5 text-sm"><p>Sep 2024 - Present</p></div>
+                </div>
+                <!-- CS50 -->
+                <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear" class="flex justify-between items-baseline mb-20">
+                    <div class="w-2/5 text-right text-sm"><p>Aug 2023 - Aug 2024</p></div>
+                    <div class="h-16 w-16 text-center m-auto bg-white rounded-full border-4 border-[#2563eb]"><i class="fa-solid fa-laptop fa-xl mt-7" style="color: #2563eb;"></i></div>
+                    <div class="w-2/5 bg-[#1f2937] rounded-lg p-6">
+                        <h1 class="text-xl font-bold">Harvard University – Online</h1>
+                        <p class="text-lg">CS50: Introduction to Computer Science</p>
+                    </div>
+                </div>
+                <!-- College -->
+                <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear" class="flex justify-between items-baseline mb-20">
+                    <div class="w-2/5 bg-[#1f2937] rounded-lg p-6">
+                        <h1 class="text-xl font-bold">Hassan II University – Casablanca, Morocco</h1>
+                        <p class="text-lg">B.Sc. Mathematics and Informatics</p>
+                    </div>
+                    <div class=" h-16 w-16 text-center m-auto bg-white rounded-full border-4 border-[#2563eb]"><i class="fa-solid fa-graduation-cap fa-xl mt-7" style="color: #2563eb;"></i></div>
+                    <div class="w-2/5 text-sm"><p>Sep 2020 - July 2023</p></div>
+                </div>
+                <!-- High school -->
+                <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear" class="flex justify-between items-baseline mb-24">
+                    <div class="w-2/5  text-right text-sm"><p>July 2020</p></div>
+                    <div class=" h-16 w-16 text-center m-auto bg-white rounded-full border-4 border-[#2563eb]"><i class="fa-solid fa-graduation-cap fa-xl mt-7" style="color: #2563eb;"></i></div>
+                    <div class="w-2/5 bg-[#1f2937] rounded-lg p-6">
+                        <h1 class="text-xl font-bold">Ibno Al Yassmin High School – Casablanca, Morocco</h1>
+                        <p class="text-lg">High School</p>
+                    </div>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear">
+                    <div class="h-16 w-16 text-center m-auto bg-white rounded-full border-4 border-[#2563eb]"><i class="fa-solid fa-star fa-xl mt-7" style="color: #2563eb;"></i></div>
+                </div>
+            </div>
+            <div class="hidden lg:block"><br ><br><br></div>
+            <!-- ************* -->
+            <!-- phone version -->
+            <div class="block lg:hidden  border-l-4 ml-10 text-[#d1d5db] pr-7 mt-20 ">
+                <!-- the odin project -->
+                <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear" class="flex mb-20">
+                    <div class="relative right-8 bottom-10 h-16 w-16 text-center m-auto bg-white rounded-full border-4 border-[#2563eb]"><i class="fa-solid fa-laptop fa-lg mt-7" style="color: #2563eb;"></i></div>
+                    <div class="w-10/12 bg-[#1f2937] rounded-lg px-2 py-5">
+                        <h1 class="text-xl font-bold">The Odin Project – Online</h1>    
+                        <p class="text-lg">Full-Stack JavaScript Development</p>
+                        <p class="text-sm my-4">Sep 2024 - Present</p>
+                    </div>
+                </div>
+                <!-- CS50 -->
+                <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear" class="flex mb-20">
+                    <div class="relative right-8 bottom-10 h-16 w-16 text-center m-auto bg-white rounded-full border-4 border-[#2563eb]"><i class="fa-solid fa-laptop fa-lg mt-7" style="color: #2563eb;"></i></div>
+                    <div class="w-10/12 bg-[#1f2937] rounded-lg px-2 py-5">
+                        <h1 class="text-xl font-bold">Harvard University – Online</h1>
+                        <p class="text-lg">CS50: Introduction to Computer Science</p>
+                        <p class="text-sm my-4">Aug 2023 - Aug 2024</p>
+                    </div>
+                </div>
+                <!-- College -->
+                <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear" class="flex mb-20">
+                    <div class="relative right-8 bottom-10  h-16 w-16 text-center m-auto bg-white rounded-full border-4 border-[#2563eb]"><i class="fa-solid fa-graduation-cap fa-lg mt-7" style="color: #2563eb;"></i></div>
+                    <div class="w-10/12 bg-[#1f2937] rounded-lg px-2 py-5">
+                        <h1 class="text-xl font-bold">Hassan II University – Casablanca, Morocco</h1>
+                        <p class="text-lg">B.Sc. Mathematics and Informatics</p>
+                        <p class="text-sm my-4">Sep 2020 - July 2023</p>
+                    </div>
+                </div>
+                <!-- High school -->
+                <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear" class="flex mb-24">
+                    <div class="relative right-8 bottom-10  h-16 w-16 text-center m-auto bg-white rounded-full border-4 border-[#2563eb]"><i class="fa-solid fa-graduation-cap fa-lg mt-7" style="color: #2563eb;"></i></div>
+                    <div class="w-10/12 bg-[#1f2937] rounded-lg px-2 py-5">
+                        <h1 class="text-xl font-bold">Ibno Al Yassmin High School – Casablanca, Morocco</h1>
+                        <p class="text-lg">High School</p>
+                        <p class="text-sm my-4">July 2020</p>
+                    </div>
+                </div>
+                <!-- the last icon -->
+                <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear">
+                    <div class=" relative right-[169px] bottom-10 h-16 w-16 text-center m-auto bg-white rounded-full border-4 border-[#2563eb]"><i class="fa-solid fa-star fa-lg mt-7" style="color: #2563eb;"></i></div>
+                </div>
+            </div>
+        </section>
+        <!-- contact section -->
+        <section class="lg:mt-96 mt-32 relative -z-10">
+            <div data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear">
+                <div class="text-center font-bold text-4xl tracking-wide"><h3 class="lg:scroll-m-16 scroll-m-28" id="contact">CONTACT</h3></div>
+                <hr class="w-14 h-1.5  my-4 rounded-full border-2 m-auto border-blue-600 bg-blue-600">
+                <div class="px-4 text-center text-xl mt-6 text-[#9ca3af] mb-12"><p>Please don't hesitate to reach out by filling out the form below. I'll respond to your message promptly.</p></div>
+            </div>
+            <form data-aos="zoom-in-up" data-aos-duration="600" ata-aos-easing="linear" class="text-white lg:w-3/5 w-11/12 m-auto flex flex-col bg-gray-800 lg:px-10 lg:py-10 px-4 py-4 rounded-md shadow-lg mb-28" 
+                action="mailto:barhoudhafsa@gmail.com" method="post" enctype="multipart/form-data">
+                <div class="flex flex-col my-4">
+                    <label class="text-gray-300 font-semibold" for="name">Name</label>
+                    <input class="px-5 py-4 rounded-md my-2 placeholder:font-semibold outline-none bg-gray-600" id="name" name="name" type="text" placeholder="Enter Your Name">
+                </div>
+                <div class="flex flex-col my-4">
+                    <label class="text-gray-300 font-semibold" for="mail">Email</label>
+                    <input class="px-5 py-4 rounded-md my-2 placeholder:font-semibold outline-none bg-gray-600"  id="mail" name="mail" type="email" placeholder="Enter Your Email">
+                </div>
+                <div class="flex flex-col my-4">
+                    <label class="text-gray-300 font-semibold" for="message">Message</label>
+                    <textarea class="px-5 py-4 rounded-md my-2 placeholder:font-semibold outline-none bg-gray-600 resize-none"  rows="5" placeholder="Enter Your Message"></textarea>
+                </div>
+                <button class="lg:w-1/4 w-full tracking-wider bg-blue-600 text-white lg:py-3 py-4 rounded-md font-semibold duration-200 hover:-translate-y-1 hover:bg-blue-700 self-end" type="submit">SUBMIT</button>
+            </form>
+        </section>
+    </main>
+    <footer class="bg-black text-white lg:pt-28 pt-14 pb-14">
+        <div class="flex lg:flex-row flex-col-reverse lg:gap-60 gap-10 w-4/5 m-auto mb-9">
+            <div class="lg:w-3/4">
+                <h1 class="font-semibold lg:text-2xl text-lg lg:mb-7 mb-2">HAFSA BARHOUD</h1>
+                <p class="text-sm">As a web developer, I focus on building functional and user-friendly websites and web applications. I’m passionate about creating seamless digital experiences that deliver value to users.</p>
+            </div>
+            <div class="lg:w-1/6">
+                <h1 class="font-semibold lg:text-2xl text-lg lg:mb-7 mb-3">SOCIAL</h1>
+                <ul class="list-none flex lg:gap-8 gap-4">
+                    <li class="no-underline"><a target="_blank" href="https://www.linkedin.com/in/barhoud-hafsa-1a8350328/"><i class="fa-brands fa-linkedin-in fa-xl" style="color: #ffffff;"></i></a></li>
+                    <li class="no-underline"><a target="_blank" href="https://github.com/hafsa2002-bot"><i class="fa-brands fa-github fa-xl" style="color: #ffffff;"></i></a></li>
+                    <li class="no-underline"><a target="_blank" href="https://www.instagram.com/haf_ssa4748/"><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="w-4/5 m-auto h-[1px] bg-gray-500 border-none">
+        <div class="text-sm text-center mt-14"><p>©Copyright 2024. Made by <a class="underline font-semibold" href="https://www.linkedin.com/in/barhoud-hafsa-1a8350328/">BARHOUD HAFSA</a></p></div>
+
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
