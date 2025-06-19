@@ -15,6 +15,35 @@
         .red-light {
             background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 0%, transparent 70%);
         }
+        .carousel {
+            width: 100%;
+            height: 300px; /* Or whatever fits your design */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-images img {
+            height: 100%; /* Make images fill container height */
+            object-fit: cover; /* Crop to fill nicely */
+        }
+        .carousel-images {
+            display: flex;
+            flex-wrap: nowrap; /* Prevent wrapping */
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel {
+            position: relative; /* Make buttons position relative to this */
+            overflow: hidden;
+        }
+
+.prevBtn,
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  /* left and right positions set in HTML or CSS */
+}
     </style>
 </head>
 <script>
@@ -50,23 +79,10 @@
             </div>
             <!-- ********************* -->
             <!-- Menu for mobile phone -->
-            <!-- <div class="block lg:hidden group/menu">
+            <div class="block lg:hidden group/menu">
                 <i class="group-hover/menu:hidden fa-solid fa-bars fa-xl" style="color: #ffffff;"></i> 
                 <i class="hidden group-hover/menu:block  fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
                 <ul class="hidden group-hover/menu:block list-none bg-[#18181b]  text-white w-screen absolute z-100 right-1 top-20">
-                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#home">HOME</a></li>
-                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#about">ABOUT</a></li>
-                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#projects">PROJECTS</a></li>
-                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#educations">EDUCATION</a></li>
-                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#contact">CONTACT</a></li>
-                </ul>
-            </div> -->
-            <div class="block lg:hidden relative">
-                <button id="menu-btn" class="text-white">
-                    <i id="menu-icon" class="fa-solid fa-bars fa-xl"></i>
-                </button>
-
-                <ul id="mobile-menu" class="hidden list-none bg-[#18181b] text-white w-screen absolute z-50 right-0 top-12">
                     <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#home">HOME</a></li>
                     <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#about">ABOUT</a></li>
                     <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#projects">PROJECTS</a></li>
@@ -144,7 +160,27 @@
             </div>
             <!-- Movie App (TMDB Api) -->
             <div data-aos="zoom-in-up" data-aos-duration="800" ata-aos-easing="linear" class="bg-[#10100d] flex items-start  lg:flex-row flex-col gap-12 lg:mx-20 m-auto lg:w-10.5/12 w-11/12 rounded-lg px-7  pt-7 pb-12 mb-6">
-                <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="MovieApp.png" alt="Novexa Admin Dashboard Screenshot"></div>
+                <!-- <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="MovieApp.png" alt="Novexa Admin Dashboard Screenshot"></div> -->
+                <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9 relative carousel">
+
+                    <div class="carousel-images flex transition-transform duration-500 ease-in-out">
+                        <img src="MovieApp.png" alt="Screenshot 1" class="w-full flex-shrink-0" />
+                        <img src="MovieApp1.png" alt="Screenshot 2" class="w-full flex-shrink-0" />
+                        <img src="MovieApp2.png" alt="Screenshot 3" class="w-full flex-shrink-0" />
+                        <img src="MovieApp4.png" alt="Screenshot 3" class="w-full flex-shrink-0" />
+                        <img src="MovieApp5.png" alt="Screenshot 3" class="w-full flex-shrink-0" />
+                        <img src="MovieApp7.png" alt="Screenshot 3" class="w-full flex-shrink-0" />
+                        <img src="MovieApp6.png" alt="Screenshot 3" class="w-full flex-shrink-0" />
+                    </div>
+
+                    <button class="prevBtn absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 w-8  h-8 flex justify-center items-center rounded-full hover:bg-opacity-75 z-10">
+                        &#10094;
+                    </button>
+
+                    <button class="nextBtn absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2  w-8  h-8 flex justify-center items-center  rounded-full hover:bg-opacity-75 z-10">
+                        &#10095;
+                    </button>
+                </div>
                 <div class="lg:w-1/2 lg:mt-9">
                     <div class="font-bold text-2xl mb-3 "><h1>Movix</h1></div>
                     <div class="text-[#d1d5db] lg:pr-12"><p>Movix is a responsive movie app built with React using the TMDB API. Users can browse trending films, explore genres, watch trailers, and view movie details like ratings and release dates. The app showcases my skills in React and API integration.</p></div>
@@ -153,7 +189,31 @@
             </div>
             <!-- Digitalization system -->
             <div data-aos="zoom-in-up" data-aos-duration="800" ata-aos-easing="linear" class="bg-[#10100d] flex lg:flex-row flex-col gap-12 lg:mx-20 m-auto lg:w-10.5/12 w-11/12 rounded-lg px-7  pt-7 pb-12 mb-6">
-                <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="novexa_capture.png" alt="Novexa Admin Dashboard Screenshot"></div>
+                <!-- <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9 relative carousel">
+                    <img class="w-full" src="novexa_capture.png" alt="Novexa Admin Dashboard Screenshot">
+                </div> -->
+                <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9 relative carousel overflow-hidden rounded-lg">
+                    <div class="carousel-images flex flex-nowrap transition-transform duration-500 ease-in-out">
+                        <img src="novexa.png" alt="Screenshot 1" class="w-full flex-shrink-0 h-64 object-cover" />
+                        <img src="novexa2.png" alt="Screenshot 2" class="w-full flex-shrink-0 h-64 object-cover" />
+                        <img src="novexa3.png" alt="Screenshot 3" class="w-full flex-shrink-0 h-64 object-cover" />
+                        <img src="novexa4.png" alt="Screenshot 3" class="w-full flex-shrink-0 h-64 object-cover" />
+                        <img src="novexa5.png" alt="Screenshot 3" class="w-full flex-shrink-0 h-64 object-cover" />
+                        <img src="novexa6.png" alt="Screenshot 3" class="w-full flex-shrink-0 h-64 object-cover" />
+                        <img src="novexa7.png" alt="Screenshot 3" class="w-full flex-shrink-0 h-64 object-cover" />
+                        <img src="novexa8.png" alt="Screenshot 3" class="w-full flex-shrink-0 h-64 object-cover" />
+                        <img src="novexa9.png" alt="Screenshot 3" class="w-full flex-shrink-0 h-64 object-cover" />
+                        <img src="novexa10.png" alt="Screenshot 3" class="w-full flex-shrink-0 h-64 object-cover" />
+                        <img src="novexa11.png" alt="Screenshot 3" class="w-full flex-shrink-0 h-64 object-cover" />
+                    </div>
+                    <button class="prevBtn absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-opacity-75 z-10">
+                        &#10094;
+                    </button>
+                    <button class="nextBtn absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-opacity-75 z-10">
+                        &#10095;
+                    </button>
+                </div>
+
                 <div class="lg:w-1/2 lg:mt-9">
                     <div class="font-bold text-2xl mb-3 "><h1>Novexa</h1></div>
                     <div class="text-[#d1d5db] lg:pr-12"><p>Novexa is a digitalization system designed to streamline stock and order management for local grocery stores. Built using the MERN stack, it features barcode scanning, role-based access control (Admin, User, Member), low stock alerts, and order history tracking. The clean and responsive interface, combined with powerful admin tools, makes Novexa a complete solution for efficient inventory operations.</p></div>
@@ -335,5 +395,102 @@
     <script>
         AOS.init();
     </script>
+    <!-- <script>
+  const carouselImages = document.getElementById('carousel-images');
+  const images = carouselImages.querySelectorAll('img');
+  const totalImages = images.length;
+  let index = 0;
+  const intervalTime = 4000; // 4 seconds
+
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  // Function to update the carousel position
+  function updateCarousel() {
+    carouselImages.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  // Show next image
+  function nextImage() {
+    index = (index + 1) % totalImages;
+    updateCarousel();
+  }
+
+  // Show previous image
+  function prevImage() {
+    index = (index - 1 + totalImages) % totalImages;
+    updateCarousel();
+  }
+
+  // Event listeners for buttons
+  nextBtn.addEventListener('click', () => {
+    nextImage();
+    resetInterval();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevImage();
+    resetInterval();
+  });
+
+  // Automatic scroll
+  let autoSlide = setInterval(nextImage, intervalTime);
+
+  // Reset interval on manual click
+  function resetInterval() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(nextImage, intervalTime);
+  }
+</script> -->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const carousels = document.querySelectorAll('.carousel');
+
+  carousels.forEach(carousel => {
+    const imagesWrapper = carousel.querySelector('.carousel-images');
+    const images = imagesWrapper.querySelectorAll('img');
+    const totalImages = images.length;
+    const prevBtn = carousel.querySelector('.prevBtn');
+    const nextBtn = carousel.querySelector('.nextBtn');
+
+    let index = 0;
+    const intervalTime = 4000;
+    let autoSlide;
+
+    function updateCarousel() {
+      imagesWrapper.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextImage() {
+      index = (index + 1) % totalImages;
+      updateCarousel();
+    }
+
+    function prevImage() {
+      index = (index - 1 + totalImages) % totalImages;
+      updateCarousel();
+    }
+
+    function resetInterval() {
+      clearInterval(autoSlide);
+      autoSlide = setInterval(nextImage, intervalTime);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      nextImage();
+      resetInterval();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      prevImage();
+      resetInterval();
+    });
+
+    // Start auto slide for this carousel
+    autoSlide = setInterval(nextImage, intervalTime);
+  });
+});
+</script>
+
 </body>
 </html>
