@@ -17,6 +17,20 @@
         }
     </style>
 </head>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const menuIcon = document.getElementById("menu-icon");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  let isOpen = false;
+
+  menuBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle("hidden");
+    menuIcon.classList.toggle("fa-bars");
+    menuIcon.classList.toggle("fa-xmark");
+  });
+</script>
 <body class="bg-[#18181b] text-white">
     <header class="fixed z-40 top-0 w-full">
         <nav class=" flex justify-between items-center lg:px-14 px-4 py-5 lg:py-4 bg-[#18181b]">
@@ -36,7 +50,7 @@
             </div>
             <!-- ********************* -->
             <!-- Menu for mobile phone -->
-             <div class="block lg:hidden group/menu">
+            <!-- <div class="block lg:hidden group/menu">
                 <i class="group-hover/menu:hidden fa-solid fa-bars fa-xl" style="color: #ffffff;"></i> 
                 <i class="hidden group-hover/menu:block  fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
                 <ul class="hidden group-hover/menu:block list-none bg-[#18181b]  text-white w-screen absolute z-100 right-1 top-20">
@@ -46,7 +60,20 @@
                     <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#educations">EDUCATION</a></li>
                     <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#contact">CONTACT</a></li>
                 </ul>
-             </div>
+            </div> -->
+            <div class="block lg:hidden relative">
+                <button id="menu-btn" class="text-white">
+                    <i id="menu-icon" class="fa-solid fa-bars fa-xl"></i>
+                </button>
+
+                <ul id="mobile-menu" class="hidden list-none bg-[#18181b] text-white w-screen absolute z-50 right-0 top-12">
+                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#home">HOME</a></li>
+                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#about">ABOUT</a></li>
+                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#projects">PROJECTS</a></li>
+                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#educations">EDUCATION</a></li>
+                    <li class="font-bold pr-5 text-[#9ca3af] text-right text-xl py-5 border-t-2 border-gray-400"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -103,7 +130,6 @@
                         <!-- Databases -->
                         <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">MongoDB</div>
                         <div class="bg-[#1f2937] py-3 px-5 rounded-md text-lg font-semibold">MySQL</div>
-
                     </div>
                 </div>
             </div>
@@ -116,10 +142,19 @@
                 <hr class="w-14 h-1.5  my-4 rounded-full border-2 m-auto border-blue-600 bg-blue-600">
                 <div class="text-center lg:text-xl mt-6 text-[#9ca3af] mb-12"><p>Explore a collection of projects I've created, each showcasing my personal work and accompanied by a detailed<br class="hidden lg:block"> case study</p></div>
             </div>
+            <!-- Movie App (TMDB Api) -->
+            <div data-aos="zoom-in-up" data-aos-duration="800" ata-aos-easing="linear" class="bg-[#10100d] flex items-start  lg:flex-row flex-col gap-12 lg:mx-20 m-auto lg:w-10.5/12 w-11/12 rounded-lg px-7  pt-7 pb-12 mb-6">
+                <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="MovieApp.png" alt="Novexa Admin Dashboard Screenshot"></div>
+                <div class="lg:w-1/2 lg:mt-9">
+                    <div class="font-bold text-2xl mb-3 "><h1>Movix</h1></div>
+                    <div class="text-[#d1d5db] lg:pr-12"><p>Movix is a responsive movie app built with React using the TMDB API. Users can browse trending films, explore genres, watch trailers, and view movie details like ratings and release dates. The app showcases my skills in React and API integration.</p></div>
+                    <div class="bg-[#2563eb] font-semibold tracking-wide rounded-lg lg:w-1/3 w-1/2 text-center py-2.5 mt-5 hover:bg-[#1d4ed8]"><a target="_blank" href="https://movie-app-delta-dun-47.vercel.app/">VISIT PROJECT</a></div>
+                </div>
+            </div>
             <!-- Digitalization system -->
             <div data-aos="zoom-in-up" data-aos-duration="800" ata-aos-easing="linear" class="bg-[#10100d] flex lg:flex-row flex-col gap-12 lg:mx-20 m-auto lg:w-10.5/12 w-11/12 rounded-lg px-7  pt-7 pb-12 mb-6">
                 <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="novexa_capture.png" alt="Novexa Admin Dashboard Screenshot"></div>
-                <div class="lg:w-1/2">
+                <div class="lg:w-1/2 lg:mt-9">
                     <div class="font-bold text-2xl mb-3 "><h1>Novexa</h1></div>
                     <div class="text-[#d1d5db] lg:pr-12"><p>Novexa is a digitalization system designed to streamline stock and order management for local grocery stores. Built using the MERN stack, it features barcode scanning, role-based access control (Admin, User, Member), low stock alerts, and order history tracking. The clean and responsive interface, combined with powerful admin tools, makes Novexa a complete solution for efficient inventory operations.</p></div>
                     <div class="bg-[#2563eb] font-semibold tracking-wide rounded-lg lg:w-1/3 w-1/2 text-center py-2.5 mt-5 hover:bg-[#1d4ed8]"><a target="_blank" href="https://project-gmc.vercel.app/">VISIT PROJECT</a></div>
@@ -128,7 +163,7 @@
             <!-- Online Store -->
             <div data-aos="zoom-in-up" data-aos-duration="800" ata-aos-easing="linear" class="bg-[#10100d] flex lg:flex-row flex-col gap-12 lg:mx-20 m-auto lg:w-10.5/12 w-11/12 rounded-lg px-7  pt-7 pb-12 mb-6">
                 <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="onlineStore_capture.png"></div>
-                <div class="lg:w-1/2">
+                <div class="lg:w-1/2 lg:mt-9">
                     <div class="font-bold text-2xl mb-3 "><h1>Crystal Bloom</h1></div>
                     <div class="text-[#d1d5db] lg:pr-12"><p>Crystal Bloom is a premier online destination for timeless accessories, built to blend elegance with functionality. Powered by modern web technologies, this platform ensures a seamless shopping experience, offering a meticulously curated collection of earrings, watches, rings, and necklaces. With a mobile-friendly design, an intuitive navigation bar, and a visually engaging interface, Crystal Bloom caters to users seeking style and versatility.</p></div>
                     <div class="bg-[#2563eb] font-semibold tracking-wide rounded-lg lg:w-1/3 w-1/2 text-center py-2.5 mt-5 hover:bg-[#1d4ed8]"><a target="_blank" href="https://hafsa2002-bot.github.io/Online_Store/">VISIT PROJECT</a></div>
@@ -137,7 +172,7 @@
             <!-- Travel Agency website -->
             <div data-aos="zoom-in-up" data-aos-duration="800" ata-aos-easing="linear" class="bg-[#10100d] lg:flex-row flex-col flex gap-12 lg:mx-20 m-auto lg:w-10.5/12 w-11/12 rounded-lg px-7  pt-7 pb-12 mb-6">
                 <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="travelAgency_capture.png"></div>
-                <div class="lg:w-1/2">
+                <div class="lg:w-1/2 lg:mt-9">
                     <div class="font-bold text-2xl mb-3 "><h1>Dreamscape Travels</h1></div>
                     <div class="text-[#d1d5db] lg:pr-12">
                         <p>Dreamscape Travels is an innovative travel agency website designed to inspire your wanderlust. Built with modern web technologies, it combines elegance and functionality to deliver an engaging user experience. Featuring dynamic destination highlights, curated tour packages, and a seamless contact form, the platform ensures effortless vacation planning while emphasizing accessibility and responsiveness for stunning performance across devices.</p>
@@ -148,7 +183,7 @@
             <!-- Restaurant website -->
             <div data-aos="zoom-in-up" data-aos-duration="800" ata-aos-easing="linear" class="bg-[#10100d] flex lg:flex-row flex-col gap-12 lg:mx-20 m-auto  lg:w-10.5/12 w-11/12 rounded-lg px-7  pt-7 pb-12">
                 <div class="lg:w-7/12 w-11.5/12 m-auto lg:mt-9"><img class="w-full" src="restaurant_capture.png"></div>
-                <div class="lg:w-1/2">
+                <div class="lg:w-1/2 lg:mt-9">
                     <div class="font-bold text-2xl mb-3 "><h1>The Hungry Spoon</h1></div>
                     <div class="text-[#d1d5db] lg:pr-12"><p>The Hungry Spoon is a dynamic and visually appealing website designed to provide users with an immersive online dining experience. The website highlights the restaurant's unique offerings, menu, and services while also offering an easy way for customers to reach out and interact with the brand. Built with HTML, CSS, and FontAwesome icons, the website features sections for the menu, about the restaurant, contact form, and footer with important details.</p></div>
                     <div class="bg-[rgb(37,99,235)] font-semibold tracking-wide rounded-lg lg:w-1/3 w-1/2 text-center py-2.5 mt-5 hover:bg-[#1d4ed8]"><a target="_blank" href="https://hafsa2002-bot.github.io/CSS2/">VISIT PROJECT</a></div>
